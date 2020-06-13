@@ -1,333 +1,289 @@
-print("Hello World")
+#import os
+#import os as ahmet
+#from os import name,getcwd
+from os import name as na
+# from os import getcwd
+#from os import *
+from testmodul import testmodul_fonk
+from matematik_islemleri import *
 
-degisken = 11
-print(degisken)
-print(type(degisken))
 
-print("--------------------------------")
+testmodul_fonk("test")
 
-degisken2 = "Kodluyoruz"
-print(degisken2)
-print(type(degisken2))
 
 
-degisken2 = 50
-print(degisken2)
-print(type(degisken2))
+# print(dir(os))
+#print(os.name)
+#print(os.getcwd())
 
+print(na)
+#print(name)
+# print(getcwd())
 
 
-print("--------------------------------")
+def fonkimport():
+	from os import getcwd
+	# from os import * # hata verir, bu şekilde dosya başında import edilmeli
+	print(getcwd())
 
-number1 = 15
-number2 = 20
-total = number1 + number2
-print(total)
-print(type(total))
+fonkimport()
 
-total = 25+38
-print(total)
-print(type(total))
 
-number3 = 15/3
-print(number3)
-print(type(number3))
 
+# isim = input("isminiz: ")
+# print(isim)
+# soyisim = input("soyisminiz: ")
+# print(soyisim)
 
-print(type(9//4))
-print(18%4)
-print("Serkan Dağlıoğlu")
 
-print("--------------------------------")
 
 
-str1 = "Kodluyoruz python&flask bootcamp"
-print("str1 uzunluğu = ",len(str1))
-print("& index = ", str1.index("&"))
-str2 = "Test2"
-str3 = "Test3"
-strjoin1 = ",".join([str1,str2,str3])
-print(strjoin1)
-strplus1 = str1+","+str2+","+str3
-print(strplus1)
-dizistrsplit1 = strplus1.split(",")
-print(dizistrsplit1)
+ilksayi = 0
+ikincisayi = 0
+islem = "+"
 
+# while ilksayi!="cikis":
+while True:
 
-print(str1.replace("&","|"))
-print(str1.replace("python&flask","test"))
+	ilksayi = input("İlk sayıyı giriniz : ")
+	if ilksayi=="cikis":
+		break
 
+	# if ilksayi=="cikis":
+	# 	continue
 
+	ilksayi = int(ilksayi)
+	# print(type(ilksayi))
+	islem = input("İşlemi giriniz [+,-,*,/] : ")
+	ikincisayi = int(input("İkinci sayıyı giriniz : "))
 
+	sonuc = 0
+	if islem=="+":
+		# sonuc = ilksayi+ikincisayi
+		sonuc = topla(ilksayi,ikincisayi)
+	elif islem=="-":
+		sonuc = cikar(ilksayi,ikincisayi)
+	elif islem=="*":
+		sonuc = carp(ilksayi,ikincisayi)
+	elif islem=="/":
+		sonuc = bol(ilksayi,ikincisayi)
+	else:
+		print("Hatalı işlem türü")
 
-print("--------------------------------")
+	# print("Sonuç = " + str(sonuc))
+	# print("Sonuç = " , sonuc)
+	# print(str(ilksayi) + islem + str(ikincisayi) + " = " + str(sonuc))
+	#print("%% %s %s %s = %s" % (ilksayi,islem,ikincisayi,sonuc))
+	#print("%d %s %d = %f" % (ilksayi,islem,ikincisayi,sonuc))
+	#print("%d %s %d = %.2f" % (ilksayi,islem,ikincisayi,sonuc))
+	#print("{1} {0} {2} = {3}".format(islem,ilksayi,ikincisayi,sonuc))
+	print("{1} {0:s} {2:d} = {3:.2f}".format(islem,ilksayi,ikincisayi,sonuc))
 
 
+# print("%15s" % "istihza")
+# print("istihza".rjust(15))
+# print("%-15s" % "istihza")
+# print("istihza".ljust(15))
 
-print("TUPLE")
-tuple1 = ("item1","item2","item3")
-print(tuple1)
-print(type(tuple1))
-tuple2 = ("test",10,15)
-print(tuple1[1])
-print(len(tuple1))
-tuple3 = (1991, 2.37, ("TR", "TBMM"))
-# tuple3[1] = 2 # hata verir, tuple da eleman değiştirilemez
 
-tuple31 = tuple3[2]
-print(tuple31)
-print(type(tuple31))
-print(tuple31[1])
-print(tuple3[2][1])
+# print("depoda %(miktar)s kilo %(ürün)s kaldı" % {"miktar": 25, "ürün": "elma"})
+# print("depoda %s kilo %s kaldı" % (25,"elma"))
+# print("sayı = %d" %23)
+# print("sayı = %10.5d" %23)
 
 
 
-print("LIST")
+# print("{0} {1} ({1} {0})".format("Serkan", "Dağlıoğlu"))
+# print("{dil} dersleri, {dil2} dersleri".format(dil="python", dil2="Java"))
+# print("{:,}".format(1234567890))
 
-list1 = ["item1","item2","item3"]
-print(list1)
-print(type(list1))
-print(list1[1]) # item2
-print(list1[-1]) # item3
-list1.append("item4")
-list1.append("item5")
-print(list1)
-print(list1[-1]) # item5
 
-# del list1[3] # diziden bir eleman silme
-list1.remove(list1[3]) # diziden bir elaman silme
-print(list1)
-print("#")
 
-# print(dir(list1)) # değişken içindeki özellikleri metodları vs listeler
+# a = 1
+# while a<10:
+# 	print(a)
+# 	a += 1
 
+# print("----------------------")
 
-list2 = ["item1", 2,34.5, [1,2]]
-print(list2)
-print(list2[3][0])
+# a = 1
+# while a<100:
+# 	if a%2==0:
+# 		print(a)
+# 	a+=1
 
-print("#")
-list3 = ["Itirazım", "Var", "Ölümlü", "Dünya"]
-splitList3 = list3[:2]
-print(splitList3)
-splitList4 = list3[1:3]
-#splitList4 = list3[1:-1]
-#splitList4 = list3[-4:3]
-print(splitList4)
 
-print("#")
 
-extendlist1 = [6,8,9]
-extendlist2 = extendlist1 + [3,7] # [6,8,9,3,7]
-print(extendlist2)
+# tr_harfler = "şçöğüİı"
 
-extendlist2.pop() # [6,8,9,3]
-print(extendlist2)
+# a = 0
+# while a < len(tr_harfler):
+#     print(tr_harfler[a], sep="\n")
+#     a += 1
 
-extendlist2.reverse()
-print(extendlist2)
 
-extendlist2.sort()
-print(extendlist2)
+# print("----------------------")
 
-#print(extendlist1)
-#extendlist1.extend([3,7])
-#print(extendlist1)
+# for harf in tr_harfler:
+# 	print(harf)
 
-list3 = [1,2,3,4,5,6]
-list3.insert(2,15)
-print(list3)
+# print("----------------------")
 
+# for sayi in range(5,25):
+# 	print(sayi)
 
-# print(dir(list3)) # list3 içindeki metodları listeler
+# print("----------------------")
+# for sayi in range(10):
+# 	print(sayi)
 
 
+# print("----------------------")
+# for sayi in range(0,24,3):
+# 	print(sayi)
 
-print("#")
+# print("----------------------")
+# for sayi in range(10,0,-1):
+# 	if sayi==0:
+# 		pass
+# 	else:
+# 		print(sayi)
 
-#sozluk = dict()
-sozluk = {
-	"mektup" : "Bir şey haber vermek",
-	"makine" : "Herhangi bir enerji türünü başka bir enerjiye dönüştürmek",
-	"ilaç" 	 : "Çare, önlem.",
-	"yasa" 	 : "Kanun"
-}
-print(type(sozluk))
-print(sozluk["makine"])
-print(sozluk["yasa"])
 
-print(sozluk.values())
-print(sozluk.keys())
-print(dir(sozluk))
+# print("----------------------")
+# for sayi in range(0,10):
+# 	if sayi>5:
+# 		break
 
-sozluk2 = {
-	"a" : "A",
-	"b" : "B",
-	"c" : "C",
-}
+# 	print(sayi)
 
-sozluk.update(sozluk2)
-print(sozluk)
+# print("----------------------")
+# for sayi in range(0,10):
+# 	if sayi>5 and sayi<8:
+# 		continue
 
+# 	print(sayi)
 
-sozluk["yasa"] = "herhangi bir anlam"
-print(sozluk)
 
-del sozluk["yasa"] # sozlukten eleman silme
-print(sozluk)
-
-
-#sozlukTanimlama2 = dict(a="A", b="B")
-#print(sozlukTanimlama2)
-
-sozlukTanimlama3 = dict()
-sozlukTanimlama3["a"] = "A"
-sozlukTanimlama3["b"] = "B"
-print("sozlukTanimlama3 = ")
-print(sozlukTanimlama3)
-
-
-# yorum satırı
-
-"""
-coklu yorum satiri
-coklu yorum satiri
-coklu yorum satiri
-coklu yorum satiri
-"""
-
-strUzun = """safasdf
-asdfasdf
-asdfasdf
-asdfasdf
-asdfasdf
-"""
-
-
-
-print("KOŞULLAR")
-
-a = 33
-b = 200
-
-if b>a:
-	print("b, a dan büyüktür")
-elif a==b:
-	print("a ve b birbirine eşittir")
-elif a==b+1:
-	print("a 201 sayısına eşittir")
-else:
-	print("else")
-
-
-
-if b>a: print("oneline = b, a dan büyüktür")
-
-
-c = 1
-c = 100 if a>b else 500
-# if a>b:
-# 	c = 2
+# x = 0
+# while x<20:
+# 	x = int(input("Sayı girin"))
+# 	if x==5:
+# 	 	break
+# 	print(x)
 # else:
-# 	c = 3
-print(c)
-
-#if b>a:
-#	pass
+# 	print("else çalıştı.")
 
 
-# a = 33 , b = 200, c=500
-# b = 600
-if b>a and b<c:
-	print("b, a'dan büyük c'den küçük" )
-else:
-	print("b>a and b<c koşulu sağlanmıyor" )
-
-
-#b = 600
-if b>a or b<c:
-	print("b a'dan büyük veya c'den küçük" )
-
-
-#nested if
-print("nested if")
-if b>a:
-	if b>c:
-		print("b, c'den küçüktür")
-	print("b, a'dan büyüktür")
+#nullDegisten = None
 
 
 
 
+#print("FONKSİYONLAR")
 
-print("SET")
-set1 = { "apple", "banana", "cherry" }
-# set1 = set(("apple", "banana", "cherry")) # üstteki satır ile aynı işi yapar
-print(set1)
-
-appleSetIcindeVarmi = "apple" in set1
-print(appleSetIcindeVarmi)
-
-set1.add("orange")
-print(set1)
+# def kayit_olustur(isim, soyisim, email="Boş", telefon="Boş"):
+# 	print("Yeni Kayıt : ")
+# 	print("%s %s | email=%s | telefon=%s" % (isim,soyisim,email,telefon))
 
 
-set1.update(["orange","mango","grapes"])
-print(set1)
-
-print("set1 uzunluğu >> " , len(set1))
-
-set1.remove("orange")
-print(set1)
-
-set1.discard("orangee") # eleman kümede olmadığı halde hata vermedi. remove ile aynı şeyi yapar
-print(set1)
-
-#del set1 # set1 i komple siler
-#print(set1)
-
-
-set2 = {"a", "b" , "c"}
-set3 = {1, 2, 3}
-setBirlesim1 = set2.union(set3)
-print(setBirlesim1)
-print(set2)
-
-
-set2.update(set3)
-print(set2)
-
-
-print(set2,set3)
-setDifference1 = set2.difference(set3)
-print("setDifference1 = ")
-print(setDifference1)
-
-
-
-#setNoktaTest = {"a","b","c","d","e"}
-#print(setNoktaTest[::-1])
-#print(setNoktaTest[2:5:4])
-# stringin x indexinden y indexine kadar z karakter atlayarak git
-noktaTest = "kodluyoruz test1 test2 test3 test4"
-print(noktaTest[:-1])
-print(noktaTest[2::4])
+# kayit_olustur("Serkan","Dağlıoğlu","serkandaglioglu@gmail.com","5064485669")
+# #kayit_olustur("Serkan2","Dağlıoğlu2","serkandaglioglu2@gmail.com","50644856692")
+# #kayit_olustur("Serkan3","Dağlıoğlu3","serkandaglioglu3@gmail.com","50644856693")
+# kayit_olustur(soyisim="Dağlıoğlu",isim="Serkan",email="serkandaglioglu@gmail.com", telefon="5064485669")
+# kayit_olustur("Serkan", "Dağlıoğlu","serkandaglioglu@gmail.com")
 
 
 
 
+# islemsonucu1 = topla(1,2)
+# print(islemsonucu1)
+
+# islemsonucu2 = cikar(10,5)
+# print(islemsonucu2)
+
+# def uzunluk(oge):
+#     c = 0
+#     for s in oge:
+#         c += 1
+#     return c
+
+# print(uzunluk("serkan dağlıoğlu"))
+# # print(len("serkan dağlıoğlu")) // üstteki satır ile aynı sonucu verir
+
+
+# print("-------------------------")
+# def sayisiz_parametreli_fonksiyon(*args):
+# 	print(args)
+# 	for a in args:
+# 		print(a)
+
+# sayisiz_parametreli_fonksiyon("a","b","c","d")
+# sayisiz_parametreli_fonksiyon("x","y")
+# sayisiz_parametreli_fonksiyon("x")
+# sayisiz_parametreli_fonksiyon(1,2,4,5,6,7,89,77,5,3,37)
+
+# dizi1 = ["a","b","c","d",1,2,3]
+# sayisiz_parametreli_fonksiyon(*dizi1)
 
 
 
 
+# def sayisiz_isimli_parametreleri_fonksiyon(**kwargs):
+# 	print(type(kwargs))
+# 	print(kwargs)
+
+
+# sayisiz_isimli_parametreleri_fonksiyon(param1="Serkan",
+# 	param2="Dağlıoğlu",
+# 	param3="Kodluyoruz")
+
+
+# def kayit_olustur_kwargs(**kwargs):
+# 	print(kwargs)
+# 	print("%s %s | email=%s | telefon=%s" % (kwargs["isim"],kwargs["soyisim"],kwargs["email"],kwargs.get("telefon","Boş")))
+
+# sozluk1 = { "isim" : "Serkan" ,
+# 		"soyisim" : "Dağlıoğlu",
+# 		"email" : "serkandaglioglu@gmail.com"
+# 	}
+# kayit_olustur_kwargs(**sozluk1)
+
+
+# def fonk(param1, param2):
+# 	return param1 + param2
+
+# fonk_lambda = lambda param1, param2: param1 + param2
+
+# print(fonk(1,2))
+# print(fonk_lambda(1,2))
 
 
 
+# #harfler = "abcçdefgğhıijklmnoöprsştuüvyz"
+# #cevrim = {i: harfler.index(i) for i in harfler}
+
+# isimler = ["ahmet", "ışık", "ismail", "çiğdem",
+#            "can", "şule", "iskender"]
+
+# birlestir = lambda dizi1,ayirici : ayirici.join(dizi1)
+# # def birlestir(dizi1,ayirici):
+# # 	return ayirici.join(dizi1)
+# # print(birlestir(isimler, ","))
 
 
+# def fonksiyon_parametreli(dizi1,ayirici,fonkparam1):
+# 	return fonkparam1(dizi1,ayirici)
+
+# print(fonksiyon_parametreli(isimler,",", birlestir))
 
 
+# def fonk_icinde_fonk():
+# 	def icerideki_fonk():
+# 		print("icerideyim")
+# 	icerideki_fonk()
 
+# fonk_icinde_fonk()
+# # icerideki_fonk() # hata verir
 
 
 
