@@ -10,5 +10,11 @@ Kodluyoruz Python&Flask Classroom = [https://github.com/Kodluyoruz-Gaziantep-PyF
  - [https://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/](https://knightlab.northwestern.edu/2014/06/05/five-mini-programming-projects-for-the-python-beginner/)
 
 
-#### Ödevler
-- Sayı Tahmini
+### Ödevler
+##### ÖDEV 1: SAYI TAHMİNİ
+- Kullanıcının bulmak için tahminde bulunacağı, rastgele bilinmeyen bir sayı üret
+- Kullanıcıdan tahmin sayısını iste ve al. Girilen sayının, bizim ürettiğimiz sayıya uzaklık yakınlığına göre
+	"Çok Uzak", "Uzak", "Yakın", "Çok Yakın", "Nerdeyse Buldun" gibi uyarılar verin.
+	(Bu uyarı metinleri siz kendiniz değiştirip, farklı seçeneklerde ekleyebilirsiniz.)
+- Kullanıcı doğru bildiğinde ona doğruyu bulduğuna dair bir mesaj göster(Kaçıncı denemede bulduğu bilgisi de gösterilecek
+- Yazılımı geliştirirken bugüne kadar öğrendiğimiz özellikleri kullanmaya çalışacağız. (Döngüler,Fonksiyonlar,Modüller vs...)
