@@ -17,5 +17,5 @@ Kodluyoruz Python&Flask Classroom = [https://github.com/Kodluyoruz-Gaziantep-PyF
 	"Çok Uzak", "Uzak", "Yakın", "Çok Yakın", "Nerdeyse Buldun" gibi uyarılar verin.
 	(Bu uyarı metinleri siz kendiniz değiştirip, farklı seçeneklerde ekleyebilirsiniz.)
 3. Kullanıcı doğru bildiğinde ona doğruyu bulduğuna dair bir mesaj göster(Kaçıncı denemede bulduğu bilgisi de gösterilecek
-4. Kullanıcıya "Yeniden oynamak ister misiniz?" sorusu sorulup cevap olarak "Y" girdiği zaman yeni oyunu başlat(Yeni oyun başlayınca 1. adımdan itibaren senaryo baştan başlar)
+4. Kullanıcıya "Yeniden oynamak ister misiniz?" sorusu sorulup cevap olarak "Y" girdiği zaman yeni oyunu başlat(Yeni oyun başlayınca 1. adımdan itibaren senaryo baştan başlar). Eğer "N" girer ise uygulamayı kapat.
 - Yazılımı geliştirirken bugüne kadar öğrendiğimiz özellikleri kullanmaya çalışacağız. (Döngüler,Fonksiyonlar,Modüller vs...)
