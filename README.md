@@ -12,9 +12,10 @@ Kodluyoruz Python&Flask Classroom = [https://github.com/Kodluyoruz-Gaziantep-PyF
 
 ### Ödevler
 ##### ÖDEV 1: SAYI TAHMİNİ
-- Kullanıcının bulmak için tahminde bulunacağı, rastgele bilinmeyen bir sayı üret
-- Kullanıcıdan tahmin sayısını iste ve al. Girilen sayının, bizim ürettiğimiz sayıya uzaklık yakınlığına göre
+1. Kullanıcının bulmak için tahminde bulunacağı, rastgele bilinmeyen bir sayı üret
+2. Kullanıcıdan tahmin sayısını iste ve al. Girilen sayının, bizim ürettiğimiz sayıya uzaklık yakınlığına göre
 	"Çok Uzak", "Uzak", "Yakın", "Çok Yakın", "Nerdeyse Buldun" gibi uyarılar verin.
 	(Bu uyarı metinleri siz kendiniz değiştirip, farklı seçeneklerde ekleyebilirsiniz.)
-- Kullanıcı doğru bildiğinde ona doğruyu bulduğuna dair bir mesaj göster(Kaçıncı denemede bulduğu bilgisi de gösterilecek
+3. Kullanıcı doğru bildiğinde ona doğruyu bulduğuna dair bir mesaj göster(Kaçıncı denemede bulduğu bilgisi de gösterilecek
+4. Kullanıcıya "Yeniden oynamak ister misiniz?" sorusu sorulup cevap olarak "Y" girdiği zaman yeni oyunu başlat(Yeni oyun başlayınca 1. adımdan itibaren senaryo baştan başlar)
 - Yazılımı geliştirirken bugüne kadar öğrendiğimiz özellikleri kullanmaya çalışacağız. (Döngüler,Fonksiyonlar,Modüller vs...)
