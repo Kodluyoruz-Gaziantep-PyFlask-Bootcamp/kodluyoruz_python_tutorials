@@ -1,0 +1,35 @@
+p{color:blue;}
+span{font-size: 18px;}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+span.span1{font-size:30px;}
+#ozeldiv{background-color: red;color:white;}
+.testclass1, .testclass2{color:green;}
+.testclass2{font-size:32px;}
+
+
+.tepediv > .ortadiv .testspan3{color:blue;}
+
+
+a.testlink{color:blue;}
+a:hover{color:green;}
+/*yorum satırı
+birden fazla satır
+*/
+a[href="y.html"]{font-size:32px;}
