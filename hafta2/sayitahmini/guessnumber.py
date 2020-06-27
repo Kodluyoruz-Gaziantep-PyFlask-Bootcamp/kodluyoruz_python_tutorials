@@ -1,4 +1,3 @@
-import random
 from yardimci_fonksiyonlar import get_distance_message,generate_number,get_input,str_is_integer
 
 def play_game():
