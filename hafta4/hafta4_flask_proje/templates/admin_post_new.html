@@ -1,0 +1,29 @@
+{% extends "admin_layout.html" %}
+
+{% block content %}
+
+    <div class="page-wrapper p-5">
+        <h1>Yazı Ekle</h1>
+
+        <form action="{{ url_for("admin.post_new") }}" method="post">
+
+            <div class="form-group">
+                <label for="post_title">Başlık</label>
+                <input type="text" name="post_title" class="form-control" id="post_title">
+            </div>
+
+            <div class="form-group">
+                <label for="post_summary">Kısa Açıklama</label>
+                <textarea name="post_summary" class="form-control" id="post_summary" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="post_content">İçerik</label>
+                <textarea name="post_content" class="form-control" id="post_content" rows="10"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Kaydet</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+
+    <div class="p-5 post-wrapper mb-5">
+        <h1>{{ post_item["post_title"] }}</h1>
+        <p>
+            <small>Yazar : <i>{{ post_item["full_name"] }}</i></small>
+        </p>
+
+        <div class="post-content">
+            {{ post_item["post_content"]|safe }}
+        </div>
+
+    </div>
+
+
+{% endblock %}

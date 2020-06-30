@@ -1,0 +1,33 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+
+    <form action="{{ url_for("posts") }}" class="form-inline">
+            <div class="form-group mr-3 mb-2">
+                <input type="text" name="query" class="form-control" placeholder="Search something...">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Search</button>
+    </form>
+
+    {% if post_items|length<1 %}
+        <div class="alert alert-info">Sonuç bulunamadı</div>
+    {% endif %}
+
+    <div class="posts">
+        {% for post in post_items %}
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{ post["post_title"] }}</h5>
+                    <p>
+                        <small>Yazar : <i>{{ post["full_name"] }}</i></small>
+                    </p>
+                    <p class="card-text">
+                        {{ post["post_summary"] }}
+                    </p>
+                    <a href="{{ url_for("show_post", id=post["post_id"]) }}" class="card-link">View Post</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
