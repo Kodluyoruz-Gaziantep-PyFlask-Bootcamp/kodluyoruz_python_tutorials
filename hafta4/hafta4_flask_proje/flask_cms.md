@@ -13,7 +13,7 @@
 
 
 
-Kullanılan kütüphaneler:
+## Kullanılan kütüphaneler:
 - Flask-wtf plugini 		= https://flask-wtf.readthedocs.io/en/stable/index.html
 - Wtforms kütüphanesi 		= https://wtforms.readthedocs.io/en/2.3.x/
 - Gettext translation 		= https://pythonhosted.org/Flask-Babel/
