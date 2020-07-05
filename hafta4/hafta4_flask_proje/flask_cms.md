@@ -1,4 +1,4 @@
-## Özellikler
+## Özellikler
 
 - Ön Yüz
 	- Yazıları Listele
