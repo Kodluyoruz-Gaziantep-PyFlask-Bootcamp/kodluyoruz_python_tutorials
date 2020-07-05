@@ -1,0 +1,390 @@
+# English translations for PROJECT.
+# Copyright (C) 2020 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2020-07-05 12:25+0300\n"
+"PO-Revision-Date: 2020-07-05 11:42+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: controllers/auth.py:35 controllers/auth.py:77
+msgid "Bilinmeyen bir hata oluştu"
+msgstr "Unknown error occured"
+
+#: controllers/auth.py:66
+msgid "Lütfen bilgileri eksiksiz giriniz"
+msgstr "Please enter the information completely"
+
+#: templates/admin_dashboard.html:6
+msgid ""
+"\n"
+"            Lorem Ipsum is simply dummy text of the printing and "
+"typesetting industry. Lorem Ipsum has been the industry's standard dummy "
+"text ever since the 1500s, when an unknown printer took a galley of type "
+"and scrambled it to make a type specimen book. It has survived not only "
+"five centuries, but also the leap into electronic typesetting, remaining "
+"essentially unchanged. It was popularised in the 1960s with the release "
+"of Letraset sheets containing Lorem Ipsum passages, and more recently "
+"with desktop publishing software like Aldus PageMaker including versions "
+"of Lorem Ipsum.\n"
+"            Lorem Ipsum is simply dummy text of the printing and "
+"typesetting industry. Lorem Ipsum has been the industry's standard dummy "
+"text ever since the 1500s, when an unknown printer took a galley of type "
+"and scrambled it to make a type specimen book. It has survived not only "
+"five centuries, but also the leap into electronic typesetting, remaining "
+"essentially unchanged. It was popularised in the 1960s with the release "
+"of Letraset sheets containing Lorem Ipsum passages, and more recently "
+"with desktop publishing software like Aldus PageMaker including versions "
+"of Lorem Ipsum.\n"
+"        "
+msgstr "uzun meetni kısa metne dönüştürdüm, bu ingilizce dili için yapıldı"
+
+#: templates/admin_layout.html:28
+msgid "Pano"
+msgstr "Dashboard"
+
+#: templates/admin_layout.html:31 templates/admin_post_new.html:6
+msgid "Yazı Ekle"
+msgstr "New Post"
+
+#: templates/admin_layout.html:34
+msgid "Yazılar"
+msgstr "Posts"
+
+#: templates/admin_layout.html:37
+msgid "Çıkış"
+msgstr "Logout"
+
+#: templates/admin_layout.html:43
+#, python-format
+msgid "Hoşgeldin %(username)s"
+msgstr "Welcome, %(username)s"
+
+#: templates/admin_post_edit.html:6
+msgid "Yazı Düzenle"
+msgstr "Post Edit"
+
+#: templates/admin_post_edit.html:13 templates/admin_post_new.html:13
+#: templates/admin_posts.html:11
+msgid "Başlık"
+msgstr "Title"
+
+#: templates/admin_post_edit.html:19 templates/admin_post_new.html:18
+msgid "Kısa Açıklama"
+msgstr "Short Description"
+
+#: templates/admin_post_edit.html:25 templates/admin_post_new.html:23
+msgid "İçerik"
+msgstr "Content"
+
+#: templates/admin_post_edit.html:32 templates/admin_post_new.html:29
+msgid "Kaydet"
+msgstr "Save"
+
+#: templates/admin_post_edit.html:65
+msgid "Post başarıyla düzendi."
+msgstr "The post has been successfully edited."
+
+#: templates/admin_post_new.html:65
+msgid "Post başarıyla kaydedildi.Postlar sayfasına yönlendiriliyorsunuz..."
+msgstr "Post was successfully saved. You are being redirected to the post page ..."
+
+#: templates/admin_posts.html:12
+msgid "Açıklama"
+msgstr "Description"
+
+#: templates/admin_posts.html:13
+msgid "İşlemler"
+msgstr "Actions"
+
+#: templates/admin_posts.html:24
+msgid "Düzenle"
+msgstr "Edit"
+
+#: templates/base_layout.html:26
+msgid "Yönetici"
+msgstr "Admin"
+
+#: templates/base_layout.html:28 templates/login.html:6
+msgid "Giriş"
+msgstr "Login"
+
+#: templates/base_layout.html:29 templates/register.html:6
+#: templates/register.html:28
+msgid "Kayıt Ol"
+msgstr "Registration"
+
+#: templates/base_layout.html:35
+msgid "Dil Seçin"
+msgstr ""
+
+#: templates/base_layout.html:38
+msgid "Türkçe"
+msgstr ""
+
+#: templates/base_layout.html:39
+msgid "İngilizce"
+msgstr ""
+
+#: templates/login.html:13 templates/register.html:16
+msgid "Kullanıcı Adı"
+msgstr "Username"
+
+#: templates/login.html:17 templates/register.html:20
+msgid "Şifre"
+msgstr "Password"
+
+#: templates/login.html:20
+msgid "Giriş Yap"
+msgstr "Login"
+
+#: templates/login.html:50
+msgid "Giriş başarılı. Ana sayfaya yönlendiriliyorsunuz..."
+msgstr "Login successful. Redirecting you to the homepage..."
+
+#: templates/posts.html:7
+msgid "arama yap..."
+msgstr "Search something..."
+
+#: templates/posts.html:9
+msgid "Ara"
+msgstr "Search"
+
+#: templates/posts.html:13
+msgid "Sonuç bulunamadı"
+msgstr "No result"
+
+#: templates/posts.html:22 templates/show_post.html:8
+msgid "Yazar"
+msgstr "Author"
+
+#: templates/posts.html:27
+msgid "Görüntüle"
+msgstr "View"
+
+#: templates/register.html:11
+msgid "Full Name"
+msgstr "Tam Adınız"
+
+#: templates/register.html:25
+msgid "Şifre Kontrol"
+msgstr "Password Confirm"
+
+#: templates/register.html:61
+msgid "Kaydınız başarıyla oluşturuldu.Giriş sayfasına yönlendiriliyorsunuz..."
+msgstr ""
+"Your registration has been successfully created. You are being redirected"
+" to the login page ..."
+
+#: venv/lib/python3.7/site-packages/flask_wtf/file.py:50
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:218
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:258
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/flask_wtf/file.py:83
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/flask_wtf/file.py:88
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:68
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:76
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:109
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:112
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:115
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:118
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:154
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:156
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:290
+msgid "Invalid input."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:355
+msgid "Invalid email address."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:388
+msgid "Invalid IP address."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:430
+msgid "Invalid Mac address."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:465
+msgid "Invalid URL."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:485
+msgid "Invalid UUID."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:515
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/validators.py:547
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/csrf/core.py:98
+#: venv/lib/python3.7/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/csrf/session.py:61
+#: venv/lib/python3.7/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/csrf/session.py:69
+#: venv/lib/python3.7/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/csrf/session.py:74
+#: venv/lib/python3.7/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/ext/appengine/fields.py:87
+#: venv/lib/python3.7/site-packages/wtforms/ext/appengine/fields.py:164
+#: venv/lib/python3.7/site-packages/wtforms/ext/appengine/fields.py:166
+#: venv/lib/python3.7/site-packages/wtforms/ext/django/fields.py:95
+#: venv/lib/python3.7/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: venv/lib/python3.7/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: venv/lib/python3.7/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: venv/lib/python3.7/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:513
+msgid "Not a valid choice"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/ext/dateutil/fields.py:75
+#: venv/lib/python3.7/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:505
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:539
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:546
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:629
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:639
+msgid "Not a valid integer value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:705
+msgid "Not a valid decimal value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:732
+msgid "Not a valid float value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:793
+msgid "Not a valid datetime value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:810
+msgid "Not a valid date value"
+msgstr ""
+
+#: venv/lib/python3.7/site-packages/wtforms/fields/core.py:827
+msgid "Not a valid time value"
+msgstr ""
+
+#~ msgid "Registration"
+#~ msgstr ""
+
+#~ msgid "Logout"
+#~ msgstr ""
+
+#~ msgid "Username"
+#~ msgstr "Username"
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Password Confirm"
+#~ msgstr "Password Confirm"
+

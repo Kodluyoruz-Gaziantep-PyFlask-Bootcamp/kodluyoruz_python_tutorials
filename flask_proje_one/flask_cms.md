@@ -1,3 +1,11 @@
+## Kütüphane Kurulumları
+- pip install Flask
+- pip install Flask-Wtf
+- pip install wtforms[email]
+- pip install Flask-Babel
+
+
+
 ## Özellikler
 
 - Ön Yüz
@@ -10,4 +18,6 @@
 	- Yazı Ekleme
 	- Yazı Düzenleme
 	- Yazı Listeleme
-
+	
+	
+	

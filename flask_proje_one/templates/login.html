@@ -1,0 +1,68 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+
+    <div class="page-wrapper p-5">
+        <h1>{{ _("Giriş") }}</h1>
+
+        <div id="info-messages"></div>
+
+        <form action="{{ url_for("auth.login") }}" method="post" id="login-form">
+            {{ loginForm.csrf_token }}
+            <div class="form-group">
+                <label for="exampleInputEmail1">{{ _("Kullanıcı Adı") }}</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">{{ _("Şifre") }}</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-login">{{ _("Giriş Yap") }}</button>
+        </form>
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+
+    <script>
+
+    $(function () {
+        var formObj = $("#login-form");
+
+        formObj.on("submit", function () {
+
+            try{
+                var formData = formObj.serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: formObj.attr("action"),
+                    data: formData,
+                    dataJson: "json",
+                    success: function (data) {
+                        if (data.status==="error"){
+                            $("#info-messages").html(data.error_message)
+                            return;
+                        }
+
+                        $("#btn-login").attr("disabled",true)
+                        $("#info-messages").html(successMessageHtml("{{ _("Giriş başarılı. Ana sayfaya yönlendiriliyorsunuz...") }}"));
+
+                        setTimeout(function(){
+                            window.location.href = "{{ url_for("admin.dashboard") }}";
+                        }, 2000);
+                    }
+                });
+            }catch (e) {
+                console.log(e);
+            }
+
+            return false;
+        });
+
+
+    })
+    </script>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+
+    <div class="page-wrapper p-5">
+        <h1>{{ _("Kayıt Ol") }}</h1>
+
+        <form action="{{ url_for("auth.register_user") }}" method="post" id="register-form">
+            {{ register_form.csrf_token }}
+            <div class="form-group">
+                <label for="input-full_name">{{ _("Full Name") }}</label>
+                <input type="text" name="full_name" class="form-control" id="input-full_name">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">{{ _("Kullanıcı Adı") }}</label>
+                <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">{{ _("Şifre") }}</label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword2">{{ _("Şifre Kontrol") }}</label>
+                <input type="password" name="password_confirm" class="form-control" id="exampleInputPassword2">
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-register">{{ _("Kayıt Ol") }}</button>
+        </form>
+
+        <div id="info-messages"></div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block script %}
+
+    <script>
+
+    $(function () {
+        var formObj = $("#register-form");
+
+        formObj.on("submit", function () {
+
+            try{
+                var formData = formObj.serializeArray();
+                $.ajax({
+                    type: "POST",
+                    url: formObj.attr("action"),
+                    data: formData,
+                    dataJson: "json",
+                    success: function (data) {
+                        if (data.status==="error"){
+                            $("#info-messages").html(data.error_message)
+                            return;
+                        }
+
+                        $("#btn-register").attr("disabled",true)
+                        $("#info-messages").html(successMessageHtml("{{ _("Kaydınız başarıyla oluşturuldu.Giriş sayfasına yönlendiriliyorsunuz...") }}"));
+
+                        setTimeout(function(){
+                            window.location.href = "{{ url_for("auth.login") }}";
+                        }, 2000);
+                    }
+                });
+            }catch (e) {
+                console.log(e);
+            }
+
+            return false;
+        });
+
+
+    })
+    </script>
+
+{% endblock %}

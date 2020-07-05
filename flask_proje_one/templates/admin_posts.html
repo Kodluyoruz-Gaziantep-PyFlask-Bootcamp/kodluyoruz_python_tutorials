@@ -8,9 +8,9 @@
             <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Post Title</th>
-                <th scope="col">Post Summary</th>
-                <th scope="col">İşlemler</th>
+                <th scope="col">{{ _("Başlık") }}</th>
+                <th scope="col">{{ _("Açıklama") }}</th>
+                <th scope="col">{{ _("İşlemler") }}</th>
             </tr>
             </thead>
             <tbody>
@@ -21,7 +21,7 @@
                     <td style="width:200px;">{{ post["post_title"] }}</td>
                     <td>{{ post["post_summary"] }}</td>
                     <td>
-                        <a href="{{ url_for("admin.post_edit",post_id=post["post_id"]) }}" class="btn btn-sm btn-primary">Düzenle</a>
+                        <a href="{{ url_for("admin.post_edit",post_id=post["post_id"]) }}" class="btn btn-sm btn-primary">{{ _("Düzenle") }}</a>
                     </td>
                 </tr>
             {% endfor %}

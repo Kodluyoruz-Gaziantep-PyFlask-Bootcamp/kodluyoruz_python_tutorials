@@ -1,16 +1,18 @@
 {% extends "base_layout.html" %}
 
+{% block title %}{{ _("Yazılar") }}{% endblock %}
+
 {% block content %}
 
-    <form action="{{ url_for("posts") }}" class="form-inline">
+    <form action="{{ url_for("website.posts") }}" class="form-inline">
             <div class="form-group mr-3 mb-2">
-                <input type="text" name="query" class="form-control" placeholder="Search something...">
+                <input type="text" name="query" class="form-control" placeholder="{{ _("arama yap...") }}">
             </div>
-            <button type="submit" class="btn btn-primary mb-2">Search</button>
+            <button type="submit" class="btn btn-primary mb-2">{{ _("Ara") }}</button>
     </form>
 
     {% if post_items|length<1 %}
-        <div class="alert alert-info">Sonuç bulunamadı</div>
+        <div class="alert alert-info">{{ _("Sonuç bulunamadı") }}</div>
     {% endif %}
 
     <div class="posts">
@@ -19,12 +21,12 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ post["post_title"] }}</h5>
                     <p>
-                        <small>Yazar : <i>{{ post["full_name"] }}</i></small>
+                        <small>{{ _("Yazar") }} : <i>{{ post["full_name"] }}</i></small>
                     </p>
                     <p class="card-text">
                         {{ post["post_summary"] }}
                     </p>
-                    <a href="{{ url_for("show_post", id=post["post_id"]) }}" class="card-link">View Post</a>
+                    <a href="{{ url_for("website.show_post", id=post["post_id"]) }}" class="card-link">{{ _("Görüntüle") }}</a>
                 </div>
             </div>
         {% endfor %}

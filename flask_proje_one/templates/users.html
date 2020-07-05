@@ -1,0 +1,32 @@
+{% extends "base_layout.html" %}
+
+{% block title %}{{ _("Yazılar") }}{% endblock %}
+
+{% block content %}
+
+    <form action="{{ url_for("website.users") }}" class="form-inline">
+            <div class="form-group mr-3 mb-2">
+                <input type="text" name="query" class="form-control" placeholder="{{ _("arama yap...") }}">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">{{ _("Ara") }}</button>
+    </form>
+
+    {% if user_items|length<1 %}
+        <div class="alert alert-info">{{ _("Sonuç bulunamadı") }}</div>
+    {% endif %}
+
+    <div class="users">
+        {% for user in user_items %}
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{ user["full_name"] }}</h5>
+                    <p class="card-text">
+                        @{{ user["username"] }}
+                    </p>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
