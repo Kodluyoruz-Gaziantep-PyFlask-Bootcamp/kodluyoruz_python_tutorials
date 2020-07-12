@@ -1,0 +1,17 @@
+{% if data["status"]=="error" %}
+    {% if form.errors %}
+        {% for field_name,field_errors in form.errors|dictsort %}
+            {% for error_message in field_errors %}
+                <div class="alert alert-danger">
+                    {{ form[field_name].label }}: {{ error_message }}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+    {% if data["error_message"] %}
+        <div class="alert alert-danger">
+            {{ data["error_message"] }}
+        </div>
+    {% endif %}
+{% endif %}

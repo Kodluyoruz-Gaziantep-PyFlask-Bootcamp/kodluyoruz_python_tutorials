@@ -1,0 +1,54 @@
+{% extends "layouts/public_layout.html" %}
+
+{% block title %}{{ ("Twitter") }}{% endblock %}
+
+
+{% block content %}
+
+
+    <div class="row mt-2">
+        <div class="col-8">
+            <img src="{{ url_for("static",filename="media/home/home-image.jpg") }}" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-4">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col text-center">
+                            <img src="{{ url_for("static",filename="media/home/login-top.png") }}" alt="" class="img-fluid img-login-top">
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <h5 class="font-weight-bold">{{ _("See what’s happening in the world right now") }}</h5>
+                    </div>
+
+                    <form action="{{ url_for("auth.login") }}" method="post" id="login-form">
+
+                        <div class="messages"></div>
+
+                        {{ form.csrf_token }}
+                        <div class="form-group">
+                            <label for="input-username_or_email">{{ _("Username OR Email") }}</label>
+                            <input type="text" name="username_or_email" class="form-control" id="input-username_or_email">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password">{{ _("Password") }}</label>
+                            <input type="password" name="password" class="form-control" id="input-password">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary btn-block" id="btn-login">{{ _("Login") }}</button>
+                    </form>
+
+                    <div class="text-center my-2"><small>{{ _("or") }}</small></div>
+
+                    <a href="{{ url_for("auth.signup") }}" class="btn btn-primary btn-block">{{ _("Signup") }}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

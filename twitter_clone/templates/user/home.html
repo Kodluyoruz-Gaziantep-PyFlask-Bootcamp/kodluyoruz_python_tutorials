@@ -1,0 +1,36 @@
+{% extends "layouts/user_layout.html" %}
+
+{% block content %}
+
+    <div class="row justify-content-md-center">
+
+        <div class="col-6">
+            <div class="card">
+                <h4 class="m-0 p-2 font-weight-bold">{{ _("Home") }}</h4>
+                <hr class="m-0">
+                <div class="card-body">
+
+                    <form action="{{ url_for("tweet.tweet") }}" method="POST" id="tweet-form">
+
+                        <div class="messages"></div>
+
+                        {{ form.csrf_token }}
+                        <div class="form-group">
+                        <textarea name="tweet_content" rows="5" class="form-control" id="input-tweet-content"
+                                  placeholder="{{ _("What is happening") }}"></textarea>
+                        </div>
+                        <div class="clearfix">
+                            <button type="submit" class="btn btn-primary float-right">{{ _("Tweet") }}</button>
+                        </div>
+                    </form>
+
+                    <hr>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

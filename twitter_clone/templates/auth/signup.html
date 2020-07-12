@@ -1,0 +1,79 @@
+{% extends "layouts/public_layout.html" %}
+
+{% block title %}{{ ("Signup | Twitter") }}{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mt-2 justify-content-md-center">
+
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="">
+                        <h3 class="font-weight-bold">{{ _("Create Your Account") }}</h3>
+                    </div>
+
+                    <form action="{{ url_for("auth.signup") }}" method="post" id="signup-form">
+
+                        <div class="messages"></div>
+
+                        {{ form.csrf_token }}
+                        <div class="form-group">
+                            <label for="input-email">{{ _("Email") }}</label>
+                            <input type="text" name="email" class="form-control" id="input-email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-username">{{ _("Username") }}</label>
+                            <input type="text" name="username" class="form-control" id="input-username">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password">{{ _("Password") }}</label>
+                            <input type="password" name="password" class="form-control" id="input-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password-confirm">{{ _("Password Confirm") }}</label>
+                            <input type="password" name="password_confirm" class="form-control" id="input-password-confirm">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary btn-block" id="btn-login">{{ _("Signup") }}</button>
+                    </form>
+
+                    <div class="text-center my-2"><small>{{ _("or") }}</small></div>
+
+                    <div class="text-center">
+                        <a href="{{ url_for("auth.login") }}" class="">{{ _("Login") }}</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">{{ _("Signup Sucessfull") }}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-info">
+                        {{ _("Congratulations your registration has been successfully completed. Please login") }}
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="{{ url_for("auth.login") }}" class="btn btn-primary">{{ _("Login") }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

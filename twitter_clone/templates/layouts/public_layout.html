@@ -1,0 +1,74 @@
+{% set append_kill_browser_cache = 4 %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for("static",filename="css/bootstrap.min.css",v=append_kill_browser_cache) }}">
+    <link rel="stylesheet" href="{{ url_for("static",filename="css/app.css",  v=append_kill_browser_cache) }}">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+
+<div class="clearfix">
+
+    <!-- Image and text -->
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for("public.main") }}">
+                <img src="{{ url_for("static",filename="media/logo.png") }}" alt="" id="top-logo" class="d-inline-block align-top">
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="{{ _("Search in twitter") }}" aria-label="Search">
+                </form>
+            </div>
+
+            <div>
+                <a href="{{ url_for("auth.login") }}" class="btn btn-light">{{ _("Login") }}</a>
+                <a href="{{ url_for("auth.signup") }}" class="btn btn-primary">{{ _("Signup") }}</a>
+            </div>
+        </div>
+
+    </nav>
+
+
+</div>
+
+
+<div class="container mb-5">
+
+{% block content %}{% endblock %}
+
+</div>
+
+
+{% block script %}{% endblock %}
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="{{ url_for("static",filename="js/jquery-3.5.1.min.js" ,v=append_kill_browser_cache) }}"></script>
+<script src="{{ url_for("static",filename="js/popper.min.js" ,v=append_kill_browser_cache) }}"></script>
+<script src="{{ url_for("static",filename="js/bootstrap.min.js" ,v=append_kill_browser_cache) }}"></script>
+
+<script>
+    var webconfig = {
+        "base_url" : "{{ config["APP_URL"] }}"
+    }
+</script>
+<script src="{{ url_for("static",filename="js/custom.js" ,v=append_kill_browser_cache) }}"></script>
+
+</body>
+</html>

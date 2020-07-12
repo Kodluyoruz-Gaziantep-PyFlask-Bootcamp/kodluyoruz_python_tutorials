@@ -1,0 +1,45 @@
+{% extends "layouts/public_layout.html" %}
+
+{% block title %}{{ ("Login | Twitter") }}{% endblock %}
+
+
+{% block content %}
+
+    <div class="row mt-2 justify-content-md-center">
+
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="">
+                        <h3 class="font-weight-bold">{{ _("Log in to Twitter") }}</h3>
+                    </div>
+
+                    <form action="{{ url_for("auth.login") }}" method="post" id="login-form">
+
+                        <div class="messages"></div>
+
+                        {{ form.csrf_token }}
+                        <div class="form-group">
+                            <label for="input-username_or_email">{{ _("Username OR Email") }}</label>
+                            <input type="text" name="username_or_email" class="form-control" id="input-username_or_email">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-password">{{ _("Password") }}</label>
+                            <input type="password" name="password" class="form-control" id="input-password">
+                        </div>
+                        <button type="submit" class="btn btn-outline-primary btn-block" id="btn-login">{{ _("Login") }}</button>
+                    </form>
+
+                    <div class="text-center my-2"><small>{{ _("or") }}</small></div>
+
+                    <a href="#" class="btn btn-primary btn-block">{{ _("Signup") }}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
